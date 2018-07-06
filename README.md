@@ -25,13 +25,16 @@ run : npm install
  https://studio3t.com/download/ 
 
  //step 4.testing with postman.
+  
   run: sls offline start --skipCacheInvalidation
 
   then go to postman and POST on http://localhost:3000/notes some JSON body with title and description value.
   similarly perform GET, PUT, and DELETE by providing id as endpoint e.g, : http://localhost:3000/notes/some-id
 
   //step 5. deploy on AWS
+  
   run : sls deploy
 
   //step 6. To remove functions
+  
   run : sls remove# sreverless-api
