@@ -3,12 +3,16 @@ CRUD api using nodejs, serverless, lambda functions and mongo cluster as Databas
 
 
 // step 1. Creating a directory
-sls create -t aws-nodejs -p rest-api && cd rest-api
+
+
+run : sls create -t aws-nodejs -p rest-api && cd rest-api
 
 -->This command will scaffold out all the necessary files and code to create our Lambda functions and API Gateway events. It will do this in the path we gave it with the -p flag. Meaning it will create a directory named rest-api.
 
+
 // step 2. Installing modules
- run : npm install
+
+run : npm install
 
  -->This will download all your dependencies.
 
