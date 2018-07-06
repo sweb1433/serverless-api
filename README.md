@@ -20,7 +20,7 @@ run : npm install
 
  https://www.mongodb.com/cloud/atlas?jmp=nav
  
- and setup your cluster and credentials to connect to your database. also download Studio 3T to connect to the database and see the tables.
+ and setup your cluster and credentials to connect to your database. also download Studio 3T to connect to the database and see the tables. also create a variable.env file in the root directory and inside that set Db=<Yur cluster cridentials>
  
  https://studio3t.com/download/ 
 
