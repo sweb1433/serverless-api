@@ -1,4 +1,5 @@
 'use strict';
+
 require('dotenv').config({ path: './variables.env' });
 const connectToDatabase = require('./db');
 const Note = require('./models/Note');
@@ -53,7 +54,7 @@ module.exports.getAll = (event, context, callback) => {
           statusCode: err.statusCode || 500,
           headers: { 'Content-Type': 'text/plain' },
           body: 'Could not fetch the notes.'
-        }))
+        }));
     });
 };
 
