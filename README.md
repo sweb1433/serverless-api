@@ -1,40 +1,38 @@
-rest-api-serverless
-CRUD api using nodejs, serverless, lambda functions and mongo cluster as Database.
+# rest-api-serverless
+
+[![N|Solid](https://image.flaticon.com/icons/svg/42/42088.svg)](https://github.com)
+
+# CRUD api using nodejs, serverless, lambda functions and mongo cluster as Database.
+
+ ###  -Step 1. Creating a directory
+      -This command will scaffold out all the necessary files and code to create our Lambda functions and API Gateway events. It will do this in the path we gave it with the -p flag. Meaning it will create a directory named rest-api.
+
+### -step 2. Installing modules
+
+    -run : npm install
+    -This will download all your dependencies.
 
 
-// step 1. Creating a directory
+### Step 3. Creating a database on MongoDB Atlas
+- click on below link
+- 
+      -https://www.mongodb.com/cloud/atlas?jmp=nav
+
+- and setup your cluster and credentials to connect to your database. also download Studio 3T to   connect to the database and see the tables. also create a variable.env file in the root     directory and inside that set DB=(your connection link with password)
+
+      -https://studio3t.com/download/
+     -click above link to download Mongo client.
 
 
-run : sls create -t aws-nodejs -p rest-api && cd rest-api
+### Step 4. Testing with postman.
+    -run: sls offline start --skipCacheInvalidation
+    
+ - then go to postman and POST on http://localhost:3000/notes some JSON body with title and description value. similarly perform GET, PUT, and DELETE by providing id as endpoint e.g, :          - http://localhost:3000/notes/some-id
 
--->This command will scaffold out all the necessary files and code to create our Lambda functions and API Gateway events. It will do this in the path we gave it with the -p flag. Meaning it will create a directory named rest-api.
+### Step 5. deploy on AWS
 
+    -run : sls deploy
 
-// step 2. Installing modules
+### Step 6. To remove functions
+    -run : sls remove sreverless-api
 
-run : npm install
-
- -->This will download all your dependencies.
-
- //step 3. Creating a database on MongoDB Atlas
-
- https://www.mongodb.com/cloud/atlas?jmp=nav
- 
- and setup your cluster and credentials to connect to your database. also download Studio 3T to connect to the database and see the tables. also create a variable.env file in the root directory and inside that set DB=(your connection link with password)
- 
- https://studio3t.com/download/ 
-
- //step 4.testing with postman.
-  
-  run: sls offline start --skipCacheInvalidation
-
-  then go to postman and POST on http://localhost:3000/notes some JSON body with title and description value.
-  similarly perform GET, PUT, and DELETE by providing id as endpoint e.g, : http://localhost:3000/notes/some-id
-
-  //step 5. deploy on AWS
-  
-  run : sls deploy
-
-  //step 6. To remove functions
-  
-  run : sls remove# sreverless-api
