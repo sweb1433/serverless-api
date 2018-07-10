@@ -30,11 +30,12 @@
 ### Step 4. Testing with postman.
     -run: sls offline start --skipCacheInvalidation
     
- - then go to postman and POST on http://localhost:3000/notes some JSON body with title and description value. similarly perform GET, PUT, and DELETE by providing id as endpoint e.g, :          - http://localhost:3000/notes/some-id
+ - then go to postman and POST on http://localhost:3000/notes some JSON body with "title": "any title"  and "description": "any description " value. similarly perform GET, PUT, and DELETE by providing id as endpoint e.g, :          - http://localhost:3000/notes/some-id
 
 ### Step 5. deploy on AWS
 
     -run : sls deploy
+  - note: uncomment 'Note.create(event.body)' and comment 'Note.create(JSON.parse(event.body))' in 'handler.js' file when deploying on serverless.
 
 ### Step 6. To remove functions
     -run : sls remove sreverless-api
