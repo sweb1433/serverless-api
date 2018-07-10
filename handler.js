@@ -10,6 +10,8 @@ module.exports.create = (event, context, callback) => {
   connectToDatabase()
     .then(() => {
       Note.create(JSON.parse(event.body))
+      //Note.create(event.body)
+    
         .then(note => callback(null, {
           statusCode: 200,
           body: JSON.stringify(note)
